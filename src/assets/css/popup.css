@@ -1,0 +1,217 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(/src/assets/fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: Kanit;
+    src: url(/src/assets/fonts/kanit-Regular.ttf);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #212529;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #495057;
+    border-radius: 10px;
+    border: 2px solid #212529;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #181C25;
+}
+.mn_cntnr {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: auto;
+    transition: all 1s ease;
+}
+.mn_ttl {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #282F3E;
+    padding: .5rem;
+    position: relative;
+    padding-top: .8rem;
+}
+.mn_ttl > span {
+    color: #FBFEF9;
+    font-size: 1.1rem;
+    font-family: "SourceSansPro";
+}
+.mn_ftr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: #282F3E;
+    padding: .5rem;
+    padding-left: .6rem;
+}
+.mn_ftr > span {
+    color: #FBFEF9;
+    font-size: .75rem;
+    font-family: "Kanit";
+}
+.btn.btn-dark {
+    border: 1px solid #495057;
+}
+.btn.btn-dark {
+    width: 95%;
+    font-size: .85rem;
+}
+.cntnt_wrpr,
+#cntnt_wrpr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+}
+.mn_cntnt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pstr_img > img {
+    width: 100px;
+    border-radius: 5px;
+}
+.ttl-nm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ttl-nm > span {
+    width: 75%;
+    color: #FBFEF9;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.brick {
+    width: 78%;
+    height: 1px;
+    background-color: #FBFEF9;
+}
+.bttn-cntnr {
+    width: 78%;
+    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: .35rem;
+}
+.season-dwnld {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.season-dwnld > span {
+    color: #FBFEF9;
+    font-size: .85rem;
+    font-family: "SourceSansPro";
+}
+#reload {
+    width: 90%;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.epsd-viwr_wrpr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.hdr_cntnr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hdr_cntnr > span {
+    color: #FBFEF9;
+    font-family: "SourceSansPro";
+    font-size: 1.30rem;
+}
+.hdr_cntnr > .cntnt_wrpr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background-color: #181C25;
+    color: #e0e0e0;
+    border: 1px solid #292e38;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.card-header {
+    background-color: #282F3E;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.list-group-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181C25;
+    border-color: #292e38;
+    color: #e0e0e0;
+    cursor: pointer;
+    padding-left: .65rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.list-group-item:hover {
+    background-color: #232730;
+}
+.list-group-item > img {
+    width: 22px;
+}
