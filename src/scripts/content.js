@@ -20,9 +20,7 @@ if(dzwtchCntnt.length > 0) {
                     animeSctns_Dt[seasonNumber] = {};
                 }
         
-                animeSctns_Dt[seasonNumber][episodeNumber] = { "url": url};
-            } else {
-                console.log(`URL'de sezon veya bölüm bilgisi bulunamadı: ${url}`);
+                animeSctns_Dt[seasonNumber][episodeNumber] = { "url": url };
             }
         }
     });
@@ -31,6 +29,5 @@ if(dzwtchCntnt.length > 0) {
         animePosterUrl,
         animeSctns_Dt
     ]
-
     chrome.runtime.sendMessage({action: 'senderData', senderAllDt: senderAll_Dt});
 }

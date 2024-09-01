@@ -34,7 +34,7 @@ async function downloadVideo(videoUrl, filename, epsdeNmbr) {
         console.error('Video indirme sırasında bir hata oluştu:', error);
     }
 }
-
+document.querySelector("html").setAttribute("style", "overflow: hidden;");
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'getUrlCntnt') {
         const regex = /'pid'\s*:\s*(\d+)/;
@@ -68,8 +68,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             const mimeType = highQulty_wtchDt["type"].split("/")[1];
             const wtchFlNm = flNm(data[0]["title"])+"_"+highQulty_Qulty;
             const epsdeNmbr = parseInt((wtchFlNm.match(/(\d+)_bölüm/) || [])[1], 10);
-
-            downloadVideo(highQulty_Url, wtchFlNm+"."+mimeType, epsdeNmbr);
+            
+            // downloadVideo(highQulty_Url, wtchFlNm+"."+mimeType, epsdeNmbr);
+            setTimeout(() => {
+                closeWindow(epsdeNmbr);
+            }, 5000);
         })
         .catch(error => {
             console.error('Fetch işleminde bir hata oluştu:', error);

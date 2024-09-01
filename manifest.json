@@ -21,9 +21,15 @@
         "service_worker": "src/scripts/service_worker.js",
         "type": "module"
     },
-    "action": {
-        "default_popup": "src/popup.html"
+    "commands": {
+        "open_popup": {
+            "suggested_key": {
+              "default": "Ctrl+Shift+Y"
+            },
+            "description": "Open the extension popup"
+        }
     },
+    "action": {},
     "icons": {
         "32": "src/assets/img/diziwatchLogo_32x32.png",
         "48": "src/assets/img/diziwatchLogo_48x48.png",
