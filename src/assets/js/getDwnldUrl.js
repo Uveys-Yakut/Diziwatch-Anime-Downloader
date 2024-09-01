@@ -69,10 +69,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             const wtchFlNm = flNm(data[0]["title"])+"_"+highQulty_Qulty;
             const epsdeNmbr = parseInt((wtchFlNm.match(/(\d+)_bölüm/) || [])[1], 10);
             
-            // downloadVideo(highQulty_Url, wtchFlNm+"."+mimeType, epsdeNmbr);
-            setTimeout(() => {
-                closeWindow(epsdeNmbr);
-            }, 5000);
+            downloadVideo(highQulty_Url, wtchFlNm+"."+mimeType, epsdeNmbr);
         })
         .catch(error => {
             console.error('Fetch işleminde bir hata oluştu:', error);
